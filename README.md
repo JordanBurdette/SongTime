@@ -2,6 +2,10 @@
 
 SongTime is an Android mobile application that offers a library of children’s songs and pre-built suggested playlists for classroom activities. The app also offers teachers the option to build their own playlists from the library of songs and organize these playlists for the time of day, classroom, or activity (however they see fit). The app was developed to have a user-friendly GUI with playlists, buttons, and various GUI elements that are familiar to the user and similar to many of the existing popular music streaming services. The app plays the songs through the mobile device’s speakers or offers the option to sync to bluetooth speaker devices.
 
+Video Demo of the app here: https://www.youtube.com/watch?v=cn47NLwRfWw&feature=youtu.be
+
+Research Paper: https://docs.google.com/document/d/1kRxsJm_aA0h0pLHPV5kHdxWVi-_89uhx4H-o9B6ie7Y/edit?usp=sharing
+
 
 
 # Running SongTime Android App
@@ -19,7 +23,7 @@ SongTime is an Android mobile application that offers a library of children’s 
     This should generate an apk file called `app-debug.apk` in `⁨SongTime⁩ ▸ ⁨app⁩ ▸ ⁨build⁩ ▸ ⁨outputs⁩ ▸ ⁨apk⁩ ▸ ⁨debug⁩`
     
 #### Alternatively, you can download the apk file that I have hosted here:
-INSERT LINK
+https://drive.google.com/file/d/1JclcbYJVwwhUzNr4xU_by3Ue7VTxZEKs/view?usp=sharing
 
 
 
