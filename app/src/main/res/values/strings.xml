@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Song Time</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Song Time: Classroom Music</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_your_playlists">Your Playlists</string>
+    <string name="menu_featured_playlists">Featured Playlists</string>
+    <string name="menu_now_playing">Now Playing</string>
+    <string name="menu_search">Search</string>
+
+    <!--Titles-->
+    <string name="your_playlists_title">Your Playlists</string>
+    <string name="featured_playlists_title">Featured Playlists</string>
+    <string name="now_playing_title">Now Playing</string>
+    <string name="search_title">Search</string>
+
+    <!--button labels-->
+    <string name="playlist1_btn_title">Instrumental</string>
+    <string name="play_btn">Play</string>
+    <string name="pause_btn">Pause</string>
+    <string name="stop_btn">Stop</string>
+
+    <string name="song1_btn_title">Itsy Bitsy Spider (Instrumental)</string>
+    <string name="song2_btn_title">The Muffin Man (Instrumental)</string>
+    <string name="song3_btn_title">Old MacDonald (Instrumental)</string>
+
+    <!--content-->
+    <string name="your_playlists_content">Your Playlists Content Goes Here</string>
+    <string name="featured_playlists_content">Featured Playlists Content Goes Here</string>
+    <string name="now_playing_content">Now Playing Content Goes Here</string>
+    <string name="search_content">Search Content Goes Here</string>
+
+</resources>
