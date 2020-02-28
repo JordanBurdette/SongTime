@@ -16,14 +16,24 @@ Research Paper: https://docs.google.com/document/d/1kRxsJm_aA0h0pLHPV5kHdxWVi-_8
   
     ```brew install gradle```
     
-2. From the root of the repository, run:
+2. Make sure you have the AndroidSDK installed. Can download from here:
+
+   https://developer.android.com/studio
+
+   The Android SDK is included with Android Studio, or you can install separately from the "Command line tools only" section.
+
+3. Edit the `local.properties` file in this project's root directory to point at your SDK install.
+
+   Example: `sdk.dir=/Users/me/Library/Android/sdk`
+    
+4. From the root of the repository, run:
     
     ```./gradlew assembleDebug```
     
     This should generate an apk file called `app-debug.apk` in `⁨SongTime⁩ ▸ ⁨app⁩ ▸ ⁨build⁩ ▸ ⁨outputs⁩ ▸ ⁨apk⁩ ▸ ⁨debug⁩`
     
-#### Alternatively, you can download the apk file that I have hosted here:
-https://drive.google.com/file/d/1JclcbYJVwwhUzNr4xU_by3Ue7VTxZEKs/view?usp=sharing
+    #### Alternatively, you can download the apk file that I have hosted here:
+    https://drive.google.com/file/d/1JclcbYJVwwhUzNr4xU_by3Ue7VTxZEKs/view?usp=sharing
 
 
 
@@ -38,7 +48,9 @@ https://drive.google.com/file/d/1JclcbYJVwwhUzNr4xU_by3Ue7VTxZEKs/view?usp=shari
 
 3. Select the SongTime.apk file on your device, and follow the on screen prompts to install. (This may require you enabling installation of apps from unverified sources)
 
-4. If you encounter any issues, please refer to this tutorial: 
+4. Launch the SongTime App from your app drawer.
+
+5. If you encounter any issues, please refer to this tutorial: 
    https://www.wikihow.tech/Install-APK-Files-on-Android
    
    
@@ -56,7 +68,9 @@ If you don't have one, one there are a couple different options to set one up:
 
 3. Select the SongTime.apk file on your device, and follow the on screen prompts to install. (This may require you enabling installation of apps from unverified sources)
 
-4. If you encounter any issues, please refer to this tutorial: 
+4. Launch the SongTime App from your app drawer.
+
+5. If you encounter any issues, please refer to this tutorial: 
    https://www.wikihow.tech/Install-APK-Files-on-Android
 
 
@@ -91,8 +105,11 @@ If you don't have one, one there are a couple different options to set one up:
 
 6. For your target deployment options, select your emulator.
 
-7. If you encounter any issues, please refer to this alternative option using the command line here:
+7. Launch the SongTime App from your app drawer.
+
+8. If you encounter any issues, please refer to this alternative option using the command line here:
   https://stackoverflow.com/questions/17167636/how-to-install-an-apk-on-the-emulator-in-android-studio
+  
 
 
 
