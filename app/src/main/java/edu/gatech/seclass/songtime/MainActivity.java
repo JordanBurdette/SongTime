@@ -92,11 +92,11 @@ public class MainActivity extends AppCompatActivity
         goToFeaturedPlaylistsPage();
     }
 
-
     public void loadUsersPlaylists(){
         usersPlaylists = new ArrayList();
     }
 
+    //Initialize and setup pre-built playlists
     public void setupPlaylists(){
         //setting up featured playlists
         featuredPlaylists = new ArrayList();
@@ -191,6 +191,7 @@ public class MainActivity extends AppCompatActivity
         playlistLibrary.addPlaylist(singAlongPlaylist);
     }
 
+    //Handles UI for naming a new playlist
     public void nameNewPlaylist(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("New Playlist Name");
@@ -219,6 +220,7 @@ public class MainActivity extends AppCompatActivity
         builder.show();
     }
 
+    //Handles the UI for confirming a playlist delete
     public void confirmDeletePlaylist(String name){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Are you sure you want to delete this playlist?");
@@ -242,6 +244,7 @@ public class MainActivity extends AppCompatActivity
         builder.show();
     }
 
+    //creating a new playlist and adding it to the library
     public void createNewPlaylist(String name){
         usersPlaylists.add(name);
 
@@ -258,9 +261,9 @@ public class MainActivity extends AppCompatActivity
         toast.show();
     }
 
+    //removing the chosen playlist to be deleted from the library.
     public void deleteUserPlaylist(String name){
-        //this is done by name... probably needs to be fixed to be done by id
-        //and playlists probably need a 'type' field of user or featured
+        //this is done by name... needs to be fixed to be done by id in fht future
         Playlist playlistToRemove = playlistLibrary.getPlaylistByTitle(name);
 
         Iterator<String> iterator = usersPlaylists.iterator();
@@ -286,6 +289,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    //back button
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -297,6 +301,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    //not currently using, but need the override, I believe
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -320,7 +325,7 @@ public class MainActivity extends AppCompatActivity
 //    }
 
 
-    @SuppressWarnings("StatementWithEmptyBody")
+    //Handling UI navigation for drawer
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
@@ -353,7 +358,7 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    //your playlists page
+    //"Your Playlists" page
     public void goToUsersPlaylistsPage(){
         LinearLayout mainLayout = (LinearLayout) findViewById(R.id.main_container);
         mainLayout.removeAllViews();
@@ -403,7 +408,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    //featured playlists page
+    //"Featured Playlists" page
     public void goToFeaturedPlaylistsPage(){
         LinearLayout mainLayout = (LinearLayout) findViewById(R.id.main_container);
 
@@ -440,7 +445,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    //search page
+    //"Search" page
     public void goToFilteredSearchPage(List<String> filteredList, final String from){
 
         LinearLayout mainLayout = (LinearLayout) findViewById(R.id.main_container);
@@ -536,7 +541,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    //search page
+    //"Search" page
     public void goToSearchPage(final String from){
 
         LinearLayout mainLayout = (LinearLayout) findViewById(R.id.main_container);
@@ -635,7 +640,7 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    //now playing page
+    //"Now Playing" page
     public void goToNowPlayingPage(){
         LinearLayout mainLayout = (LinearLayout) findViewById(R.id.main_container);
         LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -683,7 +688,7 @@ public class MainActivity extends AppCompatActivity
         });
     }
 
-
+    //Goes to a specific playlist. Displays the songs that are available to play.
     public void goToPlaylist(String playlistName)
     {
 
@@ -727,6 +732,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    //Goes to a user-created playlist. Displays songs to play, ability to add & remove songs, delete entire playlist.
     public void goToUsersPlaylist(final String playlistName){
 
         LinearLayout mainLayout = (LinearLayout) findViewById(R.id.main_container);
@@ -801,6 +807,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    //remove song page. Lets the user select a song from their playlist to remove.
     public void goToRemoveSongPage(final String playlistName){
 
         LinearLayout mainLayout = (LinearLayout) findViewById(R.id.main_container);
@@ -843,6 +850,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    //the search functionality. filtering songs via user's text
     public void filterSearchList(String query, String from){
         Playlist playlist = playlistLibrary.getPlaylistByTitle("Full Playlist");
         ArrayList<String> songs = playlist.getSongs();
@@ -859,8 +867,10 @@ public class MainActivity extends AppCompatActivity
         goToFilteredSearchPage(songList, from);
     }
 
+    //adding a song to a user-created playlist
     public void addSongToPlaylist(final String songName, final String playlistName){
 
+        //get playlist they're editing from library, remove it from library, add song to it, add it back to library.
         Playlist playlistToEdit = playlistLibrary.getPlaylistByTitle(playlistName);
         playlistLibrary.removePlaylist(playlistToEdit);
         playlistToEdit.addSong(songName);
@@ -874,6 +884,7 @@ public class MainActivity extends AppCompatActivity
         toast.show();
     }
 
+    //removing a song from a user-created playlist
     public void removeSongFromPlaylist(View v, String playlistName){
 
         Button b = (Button) v;
@@ -893,7 +904,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-
+    //playing the selected song
     public void playSong(View view) {
 
         mediaPlayer.reset();
@@ -910,18 +921,21 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    //play via media player
     public void playMedia(View view) {
         if (!mediaPlayer.isPlaying()) {
             mediaPlayer.start();
         }
     }
 
+    //pause via mediaplayer
     public void pauseMedia(View view) {
         if (mediaPlayer.isPlaying()) {
             mediaPlayer.pause();
         }
     }
 
+    //playing the previous song in the current playlist
     public void previousSong(View view){
         Playlist playlist = playlistLibrary.getPlaylistByTitle(currentPlaylist);
         ArrayList<String> songs = playlist.getSongs();
@@ -944,6 +958,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    //playing the next song in the current playlist
     public void nextSong(View view){
         Playlist playlist = playlistLibrary.getPlaylistByTitle(currentPlaylist);
         ArrayList<String> songs = playlist.getSongs();

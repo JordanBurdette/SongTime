@@ -3,6 +3,9 @@ package edu.gatech.seclass.songtime;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+Song map is used to convert text name of song to playable filename in our resources.
+ */
 public class SongMap {
     private Map<String, String> songMap;
 
@@ -39,10 +42,12 @@ public class SongMap {
         songMap.put("Yankee Doodle", "yankee_doodle");
     }
 
+    //grab the song map
     public Map<String, String> getSongMap(){
         return songMap;
     }
 
+    //grab the playable filename of a song
     public String getPlayable(String name){
         return this.songMap.get(name);
     }
