@@ -1,7 +1,7 @@
 # Running SongTime Android App
 
 
-#### TWO OPTIONS - MOBILE DEVICE OR EMULATOR
+#### Three Options - Mobile device, Emulator, or Android Studio
 
 ### APK on Mobile Device
 1. Connect any Android device to your PC or Mac.
@@ -12,9 +12,27 @@
 
 4. If you encounter any issues, please refer to this tutorial: 
    https://www.wikihow.tech/Install-APK-Files-on-Android
+   
+   
+### APK on Android Emulator
+1. Launch your Android emulator on Mac or PC.
+If you don't have one, one there are a couple different options to set one up:
+      
+      a. Through Android Studio: https://developer.android.com/studio/run/emulator#runningapp
+      
+      b. Through Command Line: https://medium.com/@rishii.kumar.chawda/install-android-emulator-for-react-native-app-without-installing-android-studio-727d7734528
+      
+      For both methods, I would recommend using the settings mentioned below in Step 4 of "APK on Emulator via Android Studio" for setup of your emulator.
+
+2. Transfer the SongTime.apk file to your emulator (via command line or drag & drop).
+
+3. Select the SongTime.apk file on your device, and follow the on screen prompts to install. (This may require you enabling installation of apps from unverified sources)
+
+4. If you encounter any issues, please refer to this tutorial: 
+   https://www.wikihow.tech/Install-APK-Files-on-Android
 
 
-### APK on Emulator
+### APK on Emulator via Android Studio
 
 1. Ensure you have Android Studio Installed (I used v3.4.2)
 
